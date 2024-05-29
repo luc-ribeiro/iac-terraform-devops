@@ -2,26 +2,30 @@
 Infra As Code - Terraform - DevOps
 </h1>
 
+<div align="right">
+    Clique <a href="https://github.com/luc-ribeiro/iac-terraform-devops/blob/main/README-PTBR.md">aqui</a> para ver a versão em Português.
+</div>
+
 <div align="center">
 
 ![Terraform](https://github.com/luc-ribeiro/iac-terraform-devops/assets/69688077/c302f806-9189-4dc8-8a45-90cf307f33c6)
 </div>
 
-## 📄 Projeto
-Projeto de Infra As Code (IAC), criando recursos básicos e avançando para estruturas mais complexas. Foram abordados datasources, módulos e outputs para facilitar a manutenção. 
-Também foi aplicado o gerenciamento de estado do cluster e configurado múltiplos provedores para criar recursos adicionais.
+## 📄 Project
+Infrastructure as Code (IAC) project, creating basic resources and advancing to more complex structures. Datasources, modules, and outputs were covered to facilitate maintenance. 
+Cluster state management was also applied, and multiple providers were configured to create additional resources.
 
-O propósito é utilizar o console dos Cloud Providers somente para leitura, e obrigatoriamente passar pelo IAC para qualquer alteração dos recursos, mantendo como a fonte única da verdade o que está em código.
-E automatizar a infraestrutura em qualquer Cloud Provider.
+The purpose is to use Cloud Providers' consoles only for reading and to pass through IAC for any resource changes, keeping what is in code as the single source of truth.
+And to automate infrastructure across any Cloud Provider.
 
-## 💻 Tecnologias
+## 💻 Technologies
 
 - **Terraform**
 - **AWS**
 - **Google Cloud Platform**
 - **Azure**
 
-## :pencil: Conceitos do Terraform
+## :pencil: Terraform Concepts
 
 - Providers
 - Modules
@@ -30,26 +34,26 @@ E automatizar a infraestrutura em qualquer Cloud Provider.
 - Variables
 - _tf.state_
 - Workspaces
-- Versionamento
-- Backend remoto
+- Versioning
+- Remote Backend
 
-## 🚀 Executando o projeto
+## 🚀 Running the project
 
-- Clone o projeto e acesse o diretório
+- Clone the project and access the directory
 
 ```bash
 $ git clone https://github.com/luc-ribeiro/iac-terraform-devops.git
 $ cd 
 ```
 
-- **[Instale o Terraform CLI](https://www.notion.so/Instalando-Terraform-CLI-7dc114561ba249db8bbb92aaf23b3f12?pvs=21)**
+- **[Install Terraform CLI](https://www.notion.so/Instalando-Terraform-CLI-7dc114561ba249db8bbb92aaf23b3f12?pvs=21)**
 
-- Escolha o Cloud Provider e instale sua respectiva CLI:
+- Choose the Cloud Provider and install its respective CLI:
   - **[AWS CLI](https://www.notion.so/Instalando-AWS-CLI-fdfc165c64e04a67b5f305771998eb68?pvs=21)**
   - **[GCloud CLI](https://www.notion.so/Instalando-gcloud-CLI-08d9667d9a5a48ed9f39c237dee6c6fd?pvs=21)**
   - **[Azure CLI](https://www.notion.so/Instalando-Azure-CLI-6511a967e1b741279172b7d1f717e446?pvs=21)**
   
-- Faça o login em seu Cloud Provider pela CLI:
+- Log in to your Cloud Provider via CLI:
 ```bash
 # GCP
 $ gcloud auth application-default login
@@ -58,28 +62,28 @@ $ gcloud auth application-default login
 $ az login
 ```
 
-- Para utilizar a AWS:
-  - É necessário configurar um token SSO no console (Identity and Access Management);
-  - Criar um usuário e definir suas permissões;
-  - Executar o comando abaixo e realizar o login pelo navegador:
+- To use AWS:
+  - You need to configure an SSO token in the console (Identity and Access Management);
+  - Create a user and set its permissions;
+  - Execute the command below and log in via the browser:
 
 ```bash
 # AWS
 $ aws configure sso
 ```
 
-- Executando o Terraform, no diretório do Cloud Provider escolhido:
+- Running Terraform, in the directory of the chosen Cloud Provider:
 
 ```bash
-# Inicie o Terraform
+# Initialize Terraform
 $ terraform init
 
-# Validar se a sintaxe HCL está correta
+# Validate if the HCL syntax is correct
 $ terraform validate
 
-# Validar o que será criado e qual vai será o resultado final
+# Validate what will be created and what the final outcome will be
 $ terraform plan
 
-# Criar ou alterar recurso na infraestrutura
+# Create or alter resource in the infrastructure
 $ terraform apply
 ```
